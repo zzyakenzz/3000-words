@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <io.codetail.widget.RevealFrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/transition_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/splashscreen"
+            android:visibility="visible"></io.codetail.widget.RevealFrameLayout>
+
+        <qlearn.com.quang.english.customview.CustomImageSplash
+            android:id="@+id/img_smile"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+
+            android:visibility="visible" />
+
+
+    </io.codetail.widget.RevealFrameLayout>
+
+    <android.support.v4.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/container_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/content_overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:orientation="vertical" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize" />
+
+        </io.codetail.widget.RevealFrameLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="@dimen/sliding_menu_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|bottom"
+            android:scrollbarThumbVertical="@android:color/transparent">
+
+            <LinearLayout
+                android:id="@+id/left_drawer"
+                android:layout_width="@dimen/sliding_menu_width"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.DrawerLayout>
+</FrameLayout>

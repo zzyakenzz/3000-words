@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.yalantis/library/1.0/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
         jumboMode="false"
-        revision="21.1.2"
-        sha1="323b57237e52a5875840c0e457329a51eefcc24f">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-c874d9d534effe6561f2003ced3a87831623537a.jar" />
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/library-2.4.0-7cf92585bfc62e22ff4b726e6841c580e435e9db.jar" />
     </item>
     <item
         jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
@@ -16,51 +16,37 @@
         <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-2f3e1412198ef0a87b7fab828bfd2c84abc63ef3.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.yalantis/library/1.0/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-44ebb508a83ff258095e4137991036ffc125dd02.jar" />
+        sha1="b5f96c33a57e4675b61bb05b4a6a701de7b77e23">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-afa087284e2e505fd641642e8072af26c6a9f958.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-f7c9ee17bb67dcb10928ee2f61f3ffc5f393be60.jar" />
+        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-d79bb6538c5c789eb41413ed572e6fbe70f91a23.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.flavienlaurent.discrollview/library/0.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4882ae79d1b017eb023db1890a8a4fd5c2862795">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-4b16e5a740a15b8d47e62876b7705a1cea102013.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-e157f35be11a934cc67b3277ae4ee11d16a2b09d.jar" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-a443608b27266afdcb631eefde5da08518ccc358.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-44ebb508a83ff258095e4137991036ffc125dd02.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-3a44b72ef12a164a7ca11e1e98043259f2671412.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-b80a210d0267b28b604727667979d7427d0f6c9d.jar" />
     </item>
     <item
         jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.yalantis/library/1.0/jars/classes.jar"
         jumboMode="false"
-        revision="23.0.1"
+        revision="21.1.2"
         sha1="323b57237e52a5875840c0e457329a51eefcc24f">
         <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-c874d9d534effe6561f2003ced3a87831623537a.jar" />
     </item>
@@ -72,53 +58,25 @@
         <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-820e6ae56ec18b75d62d830e901fb5217b241105.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-d79bb6538c5c789eb41413ed572e6fbe70f91a23.jar" />
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-f7c9ee17bb67dcb10928ee2f61f3ffc5f393be60.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.flavienlaurent.discrollview/library/0.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4882ae79d1b017eb023db1890a8a4fd5c2862795">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-820e6ae56ec18b75d62d830e901fb5217b241105.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-d79bb6538c5c789eb41413ed572e6fbe70f91a23.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/library-2.4.0-7cf92585bfc62e22ff4b726e6841c580e435e9db.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-1301fc9b863c95da706678963303f1c487b11b6d.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-62df96d7899c88c32ec915ea81ca7a0e391373df.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.yalantis/animator/1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-a443608b27266afdcb631eefde5da08518ccc358.jar" />
+        sha1="01efcd326cc12e039bc96b39d65f6d574821319a">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-9eacfdb6ff3a4a81ab65f1159153cb105be44da3.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-3a44b72ef12a164a7ca11e1e98043259f2671412.jar" />
     </item>
     <item
         jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
@@ -128,27 +86,6 @@
         <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-4199a35f865b0909c55cac58b8f9ad87f621116c.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-841f661a232c8d02422caa7ff0eeacaaa0222e6b.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-b80a210d0267b28b604727667979d7427d0f6c9d.jar" />
-    </item>
-    <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.yalantis/library/1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b5f96c33a57e4675b61bb05b4a6a701de7b77e23">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-afa087284e2e505fd641642e8072af26c6a9f958.jar" />
-    </item>
-    <item
         jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
@@ -156,11 +93,81 @@
         <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-72015d84032e18c7be45089e1e04604a132e2e62.jar" />
     </item>
     <item
-        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.flavienlaurent.discrollview/library/0.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4882ae79d1b017eb023db1890a8a4fd5c2862795">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-4b16e5a740a15b8d47e62876b7705a1cea102013.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.yalantis/library/1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
+        sha1="323b57237e52a5875840c0e457329a51eefcc24f">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-c874d9d534effe6561f2003ced3a87831623537a.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-44ebb508a83ff258095e4137991036ffc125dd02.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-1301fc9b863c95da706678963303f1c487b11b6d.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-e157f35be11a934cc67b3277ae4ee11d16a2b09d.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-d79bb6538c5c789eb41413ed572e6fbe70f91a23.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b8857429e06fc8d7a1492dc5f99338600688b8e2">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-44ebb508a83ff258095e4137991036ffc125dd02.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/exploded-aar/com.github.flavienlaurent.discrollview/library/0.0.2/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4882ae79d1b017eb023db1890a8a4fd5c2862795">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes-820e6ae56ec18b75d62d830e901fb5217b241105.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
         sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/library-2.4.0-7cf92585bfc62e22ff4b726e6841c580e435e9db.jar" />
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/library-2.4.0-7cf92585bfc62e22ff4b726e6841c580e435e9db.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-62df96d7899c88c32ec915ea81ca7a0e391373df.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/exploded-aar/com.github.ozodrukh/CircularReveal/1.0.4/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57c231461bd4ab97550b0b053c159e4f13ffc869">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/Side-Menu.Android-master/app/build/intermediates/pre-dexed/debug/classes-841f661a232c8d02422caa7ff0eeacaaa0222e6b.jar" />
     </item>
 
 </items>

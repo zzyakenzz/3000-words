@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 import java.io.File;
 
@@ -59,5 +60,19 @@ public class GeneralUtils {
     public static Integer getVersionDatabase(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(KEY_SHARE, Context.MODE_PRIVATE);
         return sharedPreferences.getInt(KEY_DATABASE_VERSION, 0);
+    }
+
+    public static int getRelativeLeft(View myView) {
+        if (myView.getParent() == myView.getRootView())
+            return myView.getLeft();
+        else
+            return myView.getLeft() + getRelativeLeft((View) myView.getParent());
+    }
+
+    public static int getRelativeTop(View myView) {
+        if (myView.getParent() == myView.getRootView())
+            return myView.getTop();
+        else
+            return myView.getTop() + getRelativeTop((View) myView.getParent());
     }
 }

@@ -5,15 +5,31 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.FloatingActionButton
+
         android:id="@+id/btn_temp_float"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
+        android:clickable="false"
         android:src="@android:drawable/sym_action_chat"
-        android:visibility="gone"
+        android:visibility="invisible"
         app:backgroundTint="@color/splashscreen"
         app:fabSize="normal" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/margin_fab"
+        android:clickable="false"
+        android:src="@android:drawable/sym_action_chat"
+        android:visibility="invisible"
+        app:backgroundTint="@color/splashscreen"
+        app:fabSize="normal" />
     <io.codetail.widget.RevealFrameLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -36,17 +52,6 @@
                 android:visibility="visible" />
         </io.codetail.widget.RevealFrameLayout>
     </io.codetail.widget.RevealFrameLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btn_float"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:src="@android:drawable/sym_action_chat"
-        android:visibility="gone"
-        app:backgroundTint="@color/splashscreen"
-        app:fabSize="normal" />
 
 
     <com.flavienlaurent.discrollview.lib.DiscrollView xmlns:android="http://schemas.android.com/apk/res/android"

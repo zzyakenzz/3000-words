@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewManager;
@@ -13,6 +15,8 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.FrameLayout;
+import android.widget.PopupWindow;
 
 import com.nineoldandroids.animation.Animator;
 
@@ -28,7 +32,7 @@ import qlearn.com.quang.english.util.GeneralUtils;
 /**
  * Created by quang.nguyen on 30/01/2016.
  */
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     final static AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
     final static AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
     final static DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
@@ -37,9 +41,10 @@ public class HomeActivity extends AppCompatActivity {
     int widthFloat = 0;
     private RevealFrameLayout transition_screen;
     private FloatingActionButton btn_temp_float, btn_float;
+    private FrameLayout main;
     // private RevealFrameLayout image_small;
     private CustomImageSplash img_smile;
-
+    private PopupWindow mPopupWindow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +56,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        main = (FrameLayout) findViewById(R.id.main);
         transition_screen = (RevealFrameLayout) findViewById(R.id.transition_screen);
         btn_temp_float = (FloatingActionButton) findViewById(R.id.btn_temp_float);
         btn_float = (FloatingActionButton) findViewById(R.id.btn_float);
+
+        btn_float.setOnClickListener(this);
         btn_float.post(new Runnable() {
             @Override
             public void run() {
@@ -66,16 +74,12 @@ public class HomeActivity extends AppCompatActivity {
         img_smile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                alphaImage();
+                alphaImage();
 //                //img_smile.setVisibility(View.INVISIBLE);
                 disappearScreen();
 
             }
         });
-//        CoordinatorLayout.LayoutParams p = (CoordinatorLayout.LayoutParams) btn_temp_float.getLayoutParams();
-//        p.setAnchorId(View.NO_ID);
-//        btn_temp_float.setLayoutParams(p);
-//        btn_temp_float.setVisibility(View.INVISIBLE);
     }
     void disappearScreen() {
         float finalRadius = Math.max(transition_screen.getWidth(), transition_screen.getHeight()) * 1.5f;
@@ -112,6 +116,7 @@ public class HomeActivity extends AppCompatActivity {
                 btn_temp_float.setVisibility(View.GONE);
                 ((ViewManager) btn_temp_float.getParent()).removeView(btn_temp_float);
                 btn_float.setVisibility(View.VISIBLE);
+                btn_float.setClickable(true);
             }
         });
         arcAnimator.start();
@@ -120,8 +125,6 @@ public class HomeActivity extends AppCompatActivity {
     void alphaImage() {
         Animation a = AnimationUtils.loadAnimation(this, R.anim.alpha_scale_face_smile);
         a.setFillAfter(true);
-        //a.reset();
-
         img_smile.startAnimation(a);
 //        float finalRadius = image_small.getWidth();
 //
@@ -146,6 +149,22 @@ public class HomeActivity extends AppCompatActivity {
         mWidth = displaymetrics.widthPixels;
     }
 
+    @Override
+    public void onClick(View v) {
+        initPopup();
+        switch (v.getId()) {
+            case R.id.btn_float:
+                mPopupWindow.showAtLocation(main, Gravity.CENTER, 100, 100);
+                break;
+        }
+    }
+
+    private void initPopup() {
+        View v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.popup_window, null, false);
+
+        mPopupWindow = new PopupWindow(v);
+
+    }
     private static class SimpleListener implements SupportAnimator.AnimatorListener, com.nineoldandroids.animation.ObjectAnimator.AnimatorListener {
 
         @Override

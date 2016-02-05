@@ -21,6 +21,7 @@ public class CustomImageSplash extends ImageView {
     int DP_60 = 0;
 
     Paint mPaintLip, mPaintEye;
+
     RectF mRectF;
     RectF mRectEyeL, mRectEyeR;
     int w = 0;
@@ -37,15 +38,18 @@ public class CustomImageSplash extends ImageView {
 
 
         mPaintLip.setAntiAlias(true);
-        mPaintLip.setColor(Color.BLACK);
+        mPaintLip.setColor(Color.parseColor("#795548"));
         mPaintLip.setStyle(Paint.Style.STROKE);
         //mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaintLip.setStrokeCap(Paint.Cap.ROUND);
         mPaintLip.setStrokeWidth(10f);
+        mPaintLip.setShadowLayer(1.0f, 0.0f, 2.0f, 0xFF000000);
+
 
         mPaintEye.setAntiAlias(true);
-        mPaintEye.setColor(Color.BLACK);
+        mPaintEye.setColor(Color.parseColor("#795548"));
         mPaintEye.setStyle(Paint.Style.FILL);
+        mPaintEye.setShadowLayer(1.0f, 0.0f, 2.0f, 0xFF000000);
 
         DP_120 = (int) GeneralUtils.convertDpToPixel(60, context);
         DP_15 = (int) GeneralUtils.convertDpToPixel(10, context);

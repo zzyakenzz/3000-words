@@ -2,9 +2,13 @@ package qlearn.com.quang.english.activity;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewManager;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
@@ -20,11 +24,15 @@ import qlearn.com.quang.english.customview.CustomImageSplash;
 /**
  * Created by quang.nguyen on 30/01/2016.
  */
-public class HomeActivity extends Activity {
+public class HomeActivity extends AppCompatActivity {
     final static AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
     final static AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
     final static DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
+    int mWidth = 0;
+    int mHeight = 0;
+    int widthFloat = 0;
     private RevealFrameLayout transition_screen;
+    private FloatingActionButton btn_temp_float, btn_float;
     // private RevealFrameLayout image_small;
     private CustomImageSplash img_smile;
 
@@ -32,42 +40,41 @@ public class HomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSizeScreen();
+        initView();
+
+    }
+
+    private void initView() {
         transition_screen = (RevealFrameLayout) findViewById(R.id.transition_screen);
-        //image_small = (RevealFrameLayout)findViewById(R.id.image_small);
+        btn_temp_float = (FloatingActionButton) findViewById(R.id.btn_temp_float);
+        btn_float = (FloatingActionButton) findViewById(R.id.btn_float);
         img_smile = (CustomImageSplash) findViewById(R.id.img_smile);
         img_smile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // both_scale_translate();
+                img_smile.setVisibility(View.INVISIBLE);
                 disappearScreen();
-                scaleImage();
+
             }
         });
     }
-
     void disappearScreen() {
         float finalRadius = Math.max(transition_screen.getWidth(), transition_screen.getHeight()) * 1.5f;
-
+        btn_temp_float.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        widthFloat = btn_temp_float.getMeasuredWidth();
         SupportAnimator animator = ViewAnimationUtils.createCircularReveal(transition_screen, transition_screen.getWidth() / 2,
                 transition_screen.getHeight() / 2,
-                finalRadius, 0);
-        animator.setDuration(10000);
+                finalRadius, widthFloat / 2f);
+        animator.setDuration(500);
         animator.addListener(new SimpleListener() {
 
             public void onAnimationEnd() {
 
                 transition_screen.setVisibility(View.GONE);
-                //img_smile.setBackgroundColor(getResources().getColor(R.color.splashscreen));
-
-//                    transition_screen.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            transition_screen.setVisibility(View.GONE);
-//                            img_smile.setVisibility(View.GONE);
-//                            image_small.setVisibility(View.VISIBLE);
-//                            scaleImage();
-//                        }
-//                    });
-
+                ((ViewManager) transition_screen.getParent()).removeView(transition_screen);
+                btn_temp_float.setVisibility(View.VISIBLE);
             }
         });
         animator.setInterpolator(DECELERATE);
@@ -75,6 +82,12 @@ public class HomeActivity extends Activity {
 
     }
 
+    void both_scale_translate() {
+        Animation a = AnimationUtils.loadAnimation(this, R.anim.scale_img_smile);
+        a.setFillAfter(true);
+        img_smile.startAnimation(a);
+        //a.start();
+    }
     void scaleImage() {
         Animation a = AnimationUtils.loadAnimation(this, R.anim.scale_img_smile);
         a.setFillAfter(true);
@@ -95,6 +108,13 @@ public class HomeActivity extends Activity {
 //        });
 //        animator.setInterpolator(DECELERATE);
 //        animator.start();
+    }
+
+    private void getSizeScreen() {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        mHeight = displaymetrics.heightPixels;
+        mWidth = displaymetrics.widthPixels;
     }
 
     private static class SimpleListener implements SupportAnimator.AnimatorListener, ObjectAnimator.AnimatorListener {

@@ -1,12 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_temp_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@android:drawable/sym_action_chat"
+        android:visibility="gone"
+        app:backgroundTint="@color/splashscreen"
+        app:fabSize="normal" />
+
+    <io.codetail.widget.RevealFrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/transition_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/splashscreen"
+            android:visibility="visible">
+
+            <qlearn.com.quang.english.customview.CustomImageSplash
+                android:id="@+id/img_smile"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+        </io.codetail.widget.RevealFrameLayout>
+    </io.codetail.widget.RevealFrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/sym_action_chat"
+        android:visibility="gone"
+        app:backgroundTint="@color/splashscreen"
+        app:fabSize="normal" />
+
 
     <com.flavienlaurent.discrollview.lib.DiscrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:discrollve="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <com.flavienlaurent.discrollview.lib.DiscrollViewContent
             android:layout_width="match_parent"
@@ -72,4 +119,4 @@
 
         </com.flavienlaurent.discrollview.lib.DiscrollViewContent>
     </com.flavienlaurent.discrollview.lib.DiscrollView>
-</LinearLayout>
+</FrameLayout>

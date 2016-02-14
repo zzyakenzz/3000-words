@@ -1,7 +1,9 @@
 package qlearn.com.quang.english.activity;
 
 
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -16,9 +18,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
+import com.flavienlaurent.discrollview.lib.DiscrollViewContent;
 import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.animation.ObjectAnimator;
 
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
@@ -39,28 +45,36 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     int mWidth = 0;
     int mHeight = 0;
     int widthFloat = 0;
-    private RevealFrameLayout transition_screen;
+    private RevealFrameLayout transition_screen,transition_popup,reveal_layout;
     private FloatingActionButton btn_temp_float, btn_float;
     private FrameLayout main;
     // private RevealFrameLayout image_small;
     private CustomImageSplash img_smile;
     private PopupWindow mPopupWindow;
+    private View view_achor;
+    boolean check = true,isPopup = true;
+    private View viewPopup;
+    private DiscrollViewContent list_main;
+    private LinearLayout title_layout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         initView();
-//        getSizeScreen();
-
-
+        initPopup();
+        getSizeScreen();
     }
 
     private void initView() {
+        viewPopup = LayoutInflater.from(getApplicationContext()).inflate(R.layout.popup_window, null, false);
         main = (FrameLayout) findViewById(R.id.main);
+       // list_main = (DiscrollViewContent) findViewById(R.id.list_main);
+        reveal_layout = (RevealFrameLayout) findViewById(R.id.reveal_layout);
         transition_screen = (RevealFrameLayout) findViewById(R.id.transition_screen);
+        transition_popup = (RevealFrameLayout) viewPopup.findViewById(R.id.transition_popup);
         btn_temp_float = (FloatingActionButton) findViewById(R.id.btn_temp_float);
         btn_float = (FloatingActionButton) findViewById(R.id.btn_float);
-
+        btn_float.bringToFront();
         btn_float.setOnClickListener(this);
         btn_float.post(new Runnable() {
             @Override
@@ -71,15 +85,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         btn_temp_float.setVisibility(View.INVISIBLE);
 
         img_smile = (CustomImageSplash) findViewById(R.id.img_smile);
-        img_smile.setOnClickListener(new View.OnClickListener() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
+            public void run() {
                 alphaImage();
 //                //img_smile.setVisibility(View.INVISIBLE);
                 disappearScreen();
-
             }
-        });
+        }, 1500);
+        title_layout = (LinearLayout) findViewById(R.id.title_layout);
+        title_layout.bringToFront();
+        title_layout.setOnClickListener(this);
+
     }
     void disappearScreen() {
         float finalRadius = Math.max(transition_screen.getWidth(), transition_screen.getHeight()) * 1.5f;
@@ -95,7 +113,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 transition_screen.setVisibility(View.GONE);
                 ((ViewManager) transition_screen.getParent()).removeView(transition_screen);
+                reveal_layout.setVisibility(View.GONE);
+                ((ViewManager) reveal_layout.getParent()).removeView(reveal_layout);
                 moveRealFloatButton();
+                //raiseListMain(list_main);
             }
         });
         animator.setInterpolator(DECELERATE);
@@ -126,20 +147,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         Animation a = AnimationUtils.loadAnimation(this, R.anim.alpha_scale_face_smile);
         a.setFillAfter(true);
         img_smile.startAnimation(a);
-//        float finalRadius = image_small.getWidth();
-//
-//        SupportAnimator animator = ViewAnimationUtils.createCircularReveal(image_small, image_small.getWidth()/2,
-//                image_small.getHeight()/2,
-//                finalRadius, image_small.getWidth() / 10);
-//        animator.setDuration(500);
-//        animator.addListener(new SimpleListener(){
-//
-//            public void onAnimationEnd() {
-//
-//            }
-//        });
-//        animator.setInterpolator(DECELERATE);
-//        animator.start();
     }
 
     private void getSizeScreen() {
@@ -148,21 +155,88 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         mHeight = displaymetrics.heightPixels;
         mWidth = displaymetrics.widthPixels;
     }
+    private void tranPopup(){
 
+        transition_popup.post(new Runnable() {
+            @Override
+            public void run() {
+                float radius = Math.max(transition_popup.getWidth(), transition_popup.getHeight()) * 1.5f;
+                SupportAnimator supportAnimator = ViewAnimationUtils.createCircularReveal(transition_popup,
+                        transition_popup.getBottom(),
+                        transition_popup.getBottom(),
+                        0,
+                        radius);
+                supportAnimator.setDuration(500);
+                supportAnimator.start();
+            }
+        });
+    }
+    private void raiseListMain(DiscrollViewContent discrollViewContent){
+        list_main.setVisibility(View.VISIBLE);
+       int startBluePairBottom = discrollViewContent.getBottom();
+        ObjectAnimator objectAnimator = ObjectAnimator.ofInt(discrollViewContent, "bottom",
+                discrollViewContent.getTop(),
+                discrollViewContent.getBottom());
+        objectAnimator.addListener(new SimpleListener(){
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+            }
+        });
+        objectAnimator.setDuration(500);
+        objectAnimator.setInterpolator(ACCELERATE_DECELERATE);
+        objectAnimator.start();
+    }
+    private void returnPopup(final PopupWindow popupWindow){
+        transition_popup.post(new Runnable() {
+            @Override
+            public void run() {
+                float radius = Math.max(transition_popup.getWidth(), transition_popup.getHeight()) * 1.5f;
+                SupportAnimator supportAnimator = ViewAnimationUtils.createCircularReveal(transition_popup,
+                        transition_popup.getBottom(),
+                        transition_popup.getBottom(),
+                        radius,
+                        0);
+                supportAnimator.addListener(new SimpleListener() {
+                    @Override
+                    public void onAnimationEnd() {
+                        popupWindow.dismiss();
+                    }
+                });
+                supportAnimator.setDuration(500);
+                supportAnimator.start();
+            }
+        });
+    }
     @Override
     public void onClick(View v) {
-        initPopup();
         switch (v.getId()) {
             case R.id.btn_float:
-                mPopupWindow.showAtLocation(main, Gravity.CENTER, 100, 100);
+               if(check&&!mPopupWindow.isShowing()){
+                   mPopupWindow.showAtLocation(main, Gravity.CENTER, 0, 0);
+                   tranPopup();
+
+               }else{
+                    mPopupWindow.dismiss();
+               }
+                check = !check;
+               // isPopup = true;
+                break;
+            case R.id.title_layout:
+                titleLayoutScale(v);
+                Toast.makeText(getApplicationContext(),"hello",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
-
+    private void titleLayoutScale(View v){
+        Animation a  = AnimationUtils.loadAnimation(this,R.anim.title_layout_scale);
+        a.setFillAfter(true);
+        v.startAnimation(a);
+    }
     private void initPopup() {
-        View v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.popup_window, null, false);
-
-        mPopupWindow = new PopupWindow(v);
+        mPopupWindow = new PopupWindow(viewPopup, ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        mPopupWindow.setBackgroundDrawable(new BitmapDrawable());
 
     }
     private static class SimpleListener implements SupportAnimator.AnimatorListener, com.nineoldandroids.animation.ObjectAnimator.AnimatorListener {

@@ -3,7 +3,103 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/main_backgroud"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shadow_backroud"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="48dp">
+        <qlearn.com.quang.english.customview.TextRoboThin
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+           android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="3000 words for you"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <qlearn.com.quang.english.customview.TextRoboThin
+                        android:id="@+id/txt_learn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                       android:layout_weight="2"
+                        android:layout_marginRight="5dp"
+                        android:padding="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/white_background"
+                        android:text="3000 words for you"/>
+                    <qlearn.com.quang.english.customview.TextRoboThin
+                        android:id="@+id/txt_learn2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                     android:layout_weight="1"
+                        android:padding="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/white_background"
+                        android:text="3000 words for you"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <qlearn.com.quang.english.customview.TextRoboThin
+                    android:id="@+id/txt_lea"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/white_background"
+                    android:text="3000 words for you"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <qlearn.com.quang.english.customview.TextRoboThin
+                    android:id="@+id/txt_lear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/white_background"
+                    android:text="3000 words for you"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
 
@@ -31,11 +127,13 @@
         android:visibility="invisible"
         app:backgroundTint="@color/splashscreen"
         app:fabSize="normal" />
+
     <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/reveal_layout"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <io.codetail.widget.RevealFrameLayout
             android:id="@+id/transition_screen"
@@ -55,15 +153,18 @@
     </io.codetail.widget.RevealFrameLayout>
 
 
-    <com.flavienlaurent.discrollview.lib.DiscrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--<com.flavienlaurent.discrollview.lib.DiscrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:discrollve="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
+
+        android:visibility="visible">
 
         <com.flavienlaurent.discrollview.lib.DiscrollViewContent
+            android:id="@+id/list_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="match_parent"
@@ -124,5 +225,5 @@
                 discrollve:discrollve_scaleY="true" />
 
         </com.flavienlaurent.discrollview.lib.DiscrollViewContent>
-    </com.flavienlaurent.discrollview.lib.DiscrollView>
+    </com.flavienlaurent.discrollview.lib.DiscrollView>-->
 </FrameLayout>

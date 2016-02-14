@@ -4,21 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_gravity="center"
-        android:layout_margin="5dp"
-        android:clipChildren="false"
-        card_view:cardBackgroundColor="#388E3C"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="2dp">
 
-        <TextView
+        <io.codetail.widget.RevealFrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:text="Google Play" />
-    </android.support.v7.widget.CardView>
+            android:layout_height="wrap_content">
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/transition_popup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow_backroud"
+            android:visibility="visible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="Google Play rewrwrewrwerw rewrqwr
+                rewrwrewrwerqr
+                rwerwqereqwrewrqerqreqwrqwere
+                rweqrewqreqreqwr
+                rwerewrweqrwerewqrwerew" />
+        </io.codetail.widget.RevealFrameLayout>
+        </io.codetail.widget.RevealFrameLayout>
+
 </LinearLayout>

@@ -81,7 +81,8 @@
                     android:padding="10dp"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/white_background"
-                    android:text="3000 words for you"/>
+                    android:textColor="@color/splashscreen"
+                    android:text="Lam is hot girl!"/>
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"

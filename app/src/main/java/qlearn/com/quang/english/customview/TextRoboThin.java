@@ -15,6 +15,6 @@ public class TextRoboThin extends TextView {
     public TextRoboThin(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setTypeface(Typer.set(context).getFont(Font.ROBOTO_THIN));
-        this.setTextColor(Color.WHITE);
+        this.setTextColor(Color.BLACK);
     }
 }

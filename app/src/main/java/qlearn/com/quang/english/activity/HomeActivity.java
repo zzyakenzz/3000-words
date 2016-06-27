@@ -20,6 +20,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.flavienlaurent.discrollview.lib.DiscrollViewContent;
@@ -56,6 +57,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private View viewPopup;
     private DiscrollViewContent list_main;
     private LinearLayout title_layout;
+    private TextView txt_title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +99,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         title_layout = (LinearLayout) findViewById(R.id.title_layout);
         title_layout.bringToFront();
         title_layout.setOnClickListener(this);
+        txt_title = (TextView)findViewById(R.id.txt_title);
 
     }
     void disappearScreen() {
@@ -115,6 +118,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 ((ViewManager) transition_screen.getParent()).removeView(transition_screen);
                 reveal_layout.setVisibility(View.GONE);
                 ((ViewManager) reveal_layout.getParent()).removeView(reveal_layout);
+
                 moveRealFloatButton();
                 //raiseListMain(list_main);
             }
@@ -212,23 +216,32 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_float:
-               if(check&&!mPopupWindow.isShowing()){
-                   mPopupWindow.showAtLocation(main, Gravity.CENTER, 0, 0);
-                   tranPopup();
 
-               }else{
-                    mPopupWindow.dismiss();
-               }
-                check = !check;
                // isPopup = true;
                 break;
             case R.id.title_layout:
-                titleLayoutScale(v);
-                Toast.makeText(getApplicationContext(),"hello",Toast.LENGTH_SHORT).show();
+
+                if(check&&!mPopupWindow.isShowing()){
+                    mPopupWindow.showAtLocation(main, Gravity.CENTER, 0, 0);
+                    tranPopup();
+                    titleLayoutScale(v);
+                }else{
+                    titleLayoutScaleRevert(v);
+                    mPopupWindow.dismiss();
+                }
+                check = !check;
+              //  Toast.makeText(getApplicationContext(),"hello",Toast.LENGTH_SHORT).show();
                 break;
         }
     }
+    private void titleLayoutScaleRevert(View v){
+        txt_title.setVisibility(View.VISIBLE);
+        Animation a  = AnimationUtils.loadAnimation(this,R.anim.title_layout_scale_revert);
+        a.setFillAfter(true);
+        v.startAnimation(a);
+    }
     private void titleLayoutScale(View v){
+        txt_title.setVisibility(View.INVISIBLE);
         Animation a  = AnimationUtils.loadAnimation(this,R.anim.title_layout_scale);
         a.setFillAfter(true);
         v.startAnimation(a);

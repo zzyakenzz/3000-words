@@ -1,14 +1,18 @@
 package qlearn.com.quang.english.util;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import qlearn.com.quang.english.database.MySQLiteHelper;
+import qlearn.com.quang.english.model.WordModel;
 
 /**
  * Created by quang.nguyen on 23/12/2015.
@@ -74,5 +78,44 @@ public class GeneralUtils {
             return myView.getTop();
         else
             return myView.getTop() + getRelativeTop((View) myView.getParent());
+    }
+    public static int getSizeScreenW(Activity activity) {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        return displaymetrics.widthPixels;
+    }
+    public static int getSizeScreenH(Activity activity) {
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+        return displaymetrics.heightPixels;
+
+    }
+    public static int dpToPixel(Context context,int dp){
+        Resources r = context.getResources();
+        return  (int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP,
+                dp,
+                r.getDisplayMetrics()
+        );
+    }
+    public static String getRefWord(String word,ArrayList<WordModel> listWords){
+    int count = 0;
+        String result = "";
+        word.toLowerCase();
+
+        for(int i = 0 ; i < listWords.size(); i++){
+            String w = listWords.get(i).getVocabulary();
+            if(!word.isEmpty()
+                    && word.contains(w.trim())
+                    && w.length()>=3
+                    && !word.equals(w)){
+                result += w.toString()+"; ";
+                count++;
+            }
+            if (count>5){
+                break;
+            }
+        }
+        return result;
     }
 }

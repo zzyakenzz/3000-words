@@ -81,9 +81,9 @@ public class MyFragment2 extends ContentFragment implements ScreenShotable {
     @Override
     public void onDetach() {
         super.onDetach();
-        if (bitmap != null) {
-            bitmap.recycle();
-            bitmap = null;
-        }
+//        if (bitmap != null) {
+//            bitmap.recycle();
+//            bitmap = null;
+//        }
     }
 }

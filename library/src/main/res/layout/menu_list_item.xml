@@ -10,7 +10,17 @@
         android:id="@+id/menu_item_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
-
-
+        android:layout_centerInParent="true"
+        />
+     <TextView
+         android:id="@+id/menu_item_label"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:textColor="@android:color/white"
+         android:textStyle="bold"
+         android:gravity="center"
+         android:layout_centerInParent="true"
+         android:text="A"
+         android:textSize="26sp"
+         />
 </RelativeLayout>

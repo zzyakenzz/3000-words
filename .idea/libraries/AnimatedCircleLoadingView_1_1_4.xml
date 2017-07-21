@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="AnimatedCircleLoadingView-1.1.4">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.jlmd/AnimatedCircleLoadingView/1.1.4/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/fabe90446974236f12da31bde39fac8b64860a40/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/fabe90446974236f12da31bde39fac8b64860a40/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/green_500"
+        android:minHeight="?attr/actionBarSize" >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ref_sub"
+            android:text="New Text"
+            android:id="@+id/img_game"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/ab_solid_shadow_holo"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+       <EditText
+           android:id="@+id/edit_word"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:lines="1"
+
+           android:padding="10dp"
+           android:layout_margin="10dp"/>
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btn_confirm"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="Relate"
+            android:layout_below="@+id/edit_word"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            >
+
+        </com.gc.materialdesign.views.ButtonRectangle>
+        <LinearLayout
+            android:id="@+id/layout_ref"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/btn_confirm"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_sub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+</FrameLayout>

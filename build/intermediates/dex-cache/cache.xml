@@ -1,3 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_dd0ee001240edbab756516b241fdade9f1119929.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/374368d48779a14b740ebebf645759487b63cbc7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_245a813979020ea4990660b7180362a82c69df98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/3a6fdb4c540a187e0a835c570b065f49ea8c68b5/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_775d0376b836842f213868dd98081ffac3f7db15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/a973968074059fc6f1174fee4cfa382d73d68a90/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b083f9ed76344c2f2b227c56d597f6d08d3fefc8">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_7f48ddc535a86c341a38b8f93745641e9fa0ad46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/3a6fdb4c540a187e0a835c570b065f49ea8c68b5/output/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_6a79d85173313c7020806e7d9b8ee2e1f7c043a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/c56cec0f9d51ba230b1ee8b47016cef7ccbe958a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_416b90c934f47c58ffa1be026d93725ce961ea0c.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/picasso-2.4.0_a3324fe48f3aca03652b0cb3d2b89526d71f51e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/ebd1379fdae6ada0dd07288d014ccc406ff99dcf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e6a161b3796c15fe00755ce47e03067e568ecc4">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_86c653a29e12ba233f36007bc40364753e7e5fab.jar" />
+    </item>
+    <item
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/library-2.4.0_7cf92585bfc62e22ff4b726e6841c580e435e9db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/picasso-2.4.0_a3324fe48f3aca03652b0cb3d2b89526d71f51e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/library/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="990c768a447560f9df818a240dd0504d12e6ee7c">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_1bdaff744b5a1e5b3558960fb72d31456e34b266.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_dd0ee001240edbab756516b241fdade9f1119929.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/4af28a9ef1986dde46cdf88b42d480e2b9c671cd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_ed5244657dd83afbef47523fd2999eec6dfbd231.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/.android/build-cache/06fb6ccdc097e6b7b8206699757ce625d86153e0/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_f2b2c38e1694932b43fcd6c4ddd4559be2146e3f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/animator/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4e4cd6c9151928493a122bae76618c358ec4b64c">
+        <dex dex="/home/local/SUTRIXMEDIA1/quang.nguyen/Downloads/Materials/3000-words/app/build/intermediates/pre-dexed/debug/classes_6f641927d18b307e74608df27574d58dc5f4a390.jar" />
+    </item>
+
+</items>

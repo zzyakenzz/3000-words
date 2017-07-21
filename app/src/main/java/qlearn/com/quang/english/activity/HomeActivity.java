@@ -1,284 +1,181 @@
 package qlearn.com.quang.english.activity;
 
 
-import android.graphics.drawable.BitmapDrawable;
+import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewManager;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
-import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.PopupWindow;
-import android.widget.Toast;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import com.flavienlaurent.discrollview.lib.DiscrollViewContent;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ObjectAnimator;
-
-import io.codetail.animation.SupportAnimator;
-import io.codetail.animation.ViewAnimationUtils;
-import io.codetail.animation.arcanimator.ArcAnimator;
-import io.codetail.animation.arcanimator.Side;
-import io.codetail.widget.RevealFrameLayout;
 import qlearn.com.quang.english.R;
-import qlearn.com.quang.english.customview.CustomImageSplash;
-import qlearn.com.quang.english.util.GeneralUtils;
+import qlearn.com.quang.english.fragment.Game_Fragment;
+import qlearn.com.quang.english.fragment.Home_Fragment;
+import qlearn.com.quang.english.fragment.List_Vocabulary_Fragment;
+import qlearn.com.quang.english.fragment.Listen_Phrase_Fragment;
+import qlearn.com.quang.english.fragment.Picture_Through_Fragment;
+import qlearn.com.quang.english.fragment.Ref_Vocabulary_Fragment;
 
 /**
  * Created by quang.nguyen on 30/01/2016.
  */
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    final static AccelerateInterpolator ACCELERATE = new AccelerateInterpolator();
-    final static AccelerateDecelerateInterpolator ACCELERATE_DECELERATE = new AccelerateDecelerateInterpolator();
-    final static DecelerateInterpolator DECELERATE = new DecelerateInterpolator();
-    int mWidth = 0;
-    int mHeight = 0;
-    int widthFloat = 0;
-    private RevealFrameLayout transition_screen,transition_popup,reveal_layout;
-    private FloatingActionButton btn_temp_float, btn_float;
-    private FrameLayout main;
-    // private RevealFrameLayout image_small;
-    private CustomImageSplash img_smile;
-    private PopupWindow mPopupWindow;
-    private View view_achor;
-    boolean check = true,isPopup = true;
-    private View viewPopup;
-    private DiscrollViewContent list_main;
-    private LinearLayout title_layout;
+public class HomeActivity extends ActionBarActivity {
+    public  static enum Frag {
+        BOOK, REF, HEADPHONE, PICTURE, GAME
+    }
+    Frag mFrag;
+    LinearLayout layout_sub;
+    ImageView img_sub;
+    Context mContext;
+    RelativeLayout layout_title_home;
+    TextView txt_title_home;
+  //  RevealFrameLayout reveal_layout,transition_screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
         initView();
-        initPopup();
-        getSizeScreen();
-    }
 
-    private void initView() {
-        viewPopup = LayoutInflater.from(getApplicationContext()).inflate(R.layout.popup_window, null, false);
-        main = (FrameLayout) findViewById(R.id.main);
-       // list_main = (DiscrollViewContent) findViewById(R.id.list_main);
-        reveal_layout = (RevealFrameLayout) findViewById(R.id.reveal_layout);
-        transition_screen = (RevealFrameLayout) findViewById(R.id.transition_screen);
-        transition_popup = (RevealFrameLayout) viewPopup.findViewById(R.id.transition_popup);
-        btn_temp_float = (FloatingActionButton) findViewById(R.id.btn_temp_float);
-        btn_float = (FloatingActionButton) findViewById(R.id.btn_float);
-        btn_float.bringToFront();
-        btn_float.setOnClickListener(this);
-        btn_float.post(new Runnable() {
+        Home_Fragment home_fragment = new Home_Fragment();
+        replaceFirst(home_fragment);
+    }
+    private void initView(){
+        mContext = getApplicationContext();
+        layout_sub = (LinearLayout)findViewById(R.id.layout_sub);
+        img_sub = (ImageView)findViewById(R.id.img_sub);
+        img_sub.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                btn_float.setVisibility(View.INVISIBLE);
-            }
-        });
-        btn_temp_float.setVisibility(View.INVISIBLE);
-
-        img_smile = (CustomImageSplash) findViewById(R.id.img_smile);
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                alphaImage();
-//                //img_smile.setVisibility(View.INVISIBLE);
-                disappearScreen();
-            }
-        }, 1500);
-        title_layout = (LinearLayout) findViewById(R.id.title_layout);
-        title_layout.bringToFront();
-        title_layout.setOnClickListener(this);
-
-    }
-    void disappearScreen() {
-        float finalRadius = Math.max(transition_screen.getWidth(), transition_screen.getHeight()) * 1.5f;
-        btn_temp_float.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        widthFloat = btn_temp_float.getMeasuredWidth();
-        SupportAnimator animator = ViewAnimationUtils.createCircularReveal(transition_screen, transition_screen.getWidth() / 2,
-                transition_screen.getHeight() / 2,
-                finalRadius, widthFloat / 2f);
-        animator.setDuration(500);
-        animator.addListener(new SimpleListener() {
-            @Override
-            public void onAnimationEnd() {
-
-                transition_screen.setVisibility(View.GONE);
-                ((ViewManager) transition_screen.getParent()).removeView(transition_screen);
-                reveal_layout.setVisibility(View.GONE);
-                ((ViewManager) reveal_layout.getParent()).removeView(reveal_layout);
-                moveRealFloatButton();
-                //raiseListMain(list_main);
-            }
-        });
-        animator.setInterpolator(DECELERATE);
-        animator.start();
-
-    }
-
-    void moveRealFloatButton() {
-        btn_temp_float.setVisibility(View.VISIBLE);
-        ArcAnimator arcAnimator = ArcAnimator.createArcAnimator(btn_temp_float,
-                GeneralUtils.getRelativeLeft(btn_float) + widthFloat / 2f,
-                GeneralUtils.getRelativeTop(btn_float) + widthFloat / 4f,
-                90, Side.LEFT)
-                .setDuration(500);
-        arcAnimator.addListener(new SimpleListener() {
-            @Override
-            public void onAnimationEnd(com.nineoldandroids.animation.Animator animation) {
-                btn_temp_float.setVisibility(View.GONE);
-                ((ViewManager) btn_temp_float.getParent()).removeView(btn_temp_float);
-                btn_float.setVisibility(View.VISIBLE);
-                btn_float.setClickable(true);
-            }
-        });
-        arcAnimator.start();
-    }
-
-    void alphaImage() {
-        Animation a = AnimationUtils.loadAnimation(this, R.anim.alpha_scale_face_smile);
-        a.setFillAfter(true);
-        img_smile.startAnimation(a);
-    }
-
-    private void getSizeScreen() {
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        mHeight = displaymetrics.heightPixels;
-        mWidth = displaymetrics.widthPixels;
-    }
-    private void tranPopup(){
-
-        transition_popup.post(new Runnable() {
-            @Override
-            public void run() {
-                float radius = Math.max(transition_popup.getWidth(), transition_popup.getHeight()) * 1.5f;
-                SupportAnimator supportAnimator = ViewAnimationUtils.createCircularReveal(transition_popup,
-                        transition_popup.getBottom(),
-                        transition_popup.getBottom(),
-                        0,
-                        radius);
-                supportAnimator.setDuration(500);
-                supportAnimator.start();
+            public void onClick(View v) {
+                img_sub.setVisibility(View.GONE);
+                layout_sub.setVisibility(View.GONE);
             }
         });
     }
-    private void raiseListMain(DiscrollViewContent discrollViewContent){
-        list_main.setVisibility(View.VISIBLE);
-       int startBluePairBottom = discrollViewContent.getBottom();
-        ObjectAnimator objectAnimator = ObjectAnimator.ofInt(discrollViewContent, "bottom",
-                discrollViewContent.getTop(),
-                discrollViewContent.getBottom());
-        objectAnimator.addListener(new SimpleListener(){
+    public void animationSub(final Frag frag,int color,int img){
+        mFrag = frag;
+        img_sub.setVisibility(View.VISIBLE);
+        img_sub.setBackgroundResource(img);
+        layout_sub.setVisibility(View.VISIBLE);
+        layout_sub.setBackgroundResource(color);
+        Animation anim = AnimationUtils.loadAnimation(mContext, R.anim.anim_replace_fragment_from_home);
+        layout_sub.startAnimation(anim);
+        anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationEnd(Animator animation) {
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+
+
+                chooseFragment();
+                layout_sub.setVisibility(View.GONE);
+
+                try {
+                    img_sub.setVisibility(View.GONE);
+                } catch (Exception e) {
+
+                }
+
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
 
             }
         });
-        objectAnimator.setDuration(500);
-        objectAnimator.setInterpolator(ACCELERATE_DECELERATE);
-        objectAnimator.start();
     }
-    private void returnPopup(final PopupWindow popupWindow){
-        transition_popup.post(new Runnable() {
-            @Override
-            public void run() {
-                float radius = Math.max(transition_popup.getWidth(), transition_popup.getHeight()) * 1.5f;
-                SupportAnimator supportAnimator = ViewAnimationUtils.createCircularReveal(transition_popup,
-                        transition_popup.getBottom(),
-                        transition_popup.getBottom(),
-                        radius,
-                        0);
-                supportAnimator.addListener(new SimpleListener() {
-                    @Override
-                    public void onAnimationEnd() {
-                        popupWindow.dismiss();
-                    }
-                });
-                supportAnimator.setDuration(500);
-                supportAnimator.start();
-            }
-        });
-    }
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_float:
-               if(check&&!mPopupWindow.isShowing()){
-                   mPopupWindow.showAtLocation(main, Gravity.CENTER, 0, 0);
-                   tranPopup();
 
-               }else{
-                    mPopupWindow.dismiss();
-               }
-                check = !check;
-               // isPopup = true;
+    private void chooseFragment(){
+        Fragment fragment = new Home_Fragment();
+        switch (mFrag){
+            case BOOK:
+                fragment = new List_Vocabulary_Fragment();
                 break;
-            case R.id.title_layout:
-                titleLayoutScale(v);
-                Toast.makeText(getApplicationContext(),"hello",Toast.LENGTH_SHORT).show();
+            case REF:
+                fragment = new Ref_Vocabulary_Fragment();
+                break;
+            case HEADPHONE:
+                fragment = new Listen_Phrase_Fragment();
+                break;
+            case PICTURE:
+                fragment = new Picture_Through_Fragment();
+                break;
+            case GAME:
+                fragment = new Game_Fragment();
                 break;
         }
+
+        replaceFragment(fragment);
     }
-    private void titleLayoutScale(View v){
-        Animation a  = AnimationUtils.loadAnimation(this,R.anim.title_layout_scale);
-        a.setFillAfter(true);
-        v.startAnimation(a);
+//    public void animationSubReveal(int x,int y){
+//        layout_title_home = (RelativeLayout)findViewById(R.id.layout_title_home);
+//        reveal_layout= (RevealFrameLayout)findViewById(R.id.reveal_layout_home);
+//        transition_screen = (RevealFrameLayout)findViewById(R.id.transition_screen_home);
+//        layout_title_home.setVisibility(View.VISIBLE);
+//        reveal_layout.setVisibility(View.VISIBLE);
+//        transition_screen.setVisibility(View.VISIBLE);
+//        float finalRadius = Math.max(transition_screen.getWidth(), transition_screen.getHeight()) * 1.5f;
+//
+//        SupportAnimator anim = ViewAnimationUtils.createCircularReveal(transition_screen,x,y,0,finalRadius);
+//        anim.setDuration(1000);
+//        anim.addListener(new SimpleListener() {
+//            @Override
+//            public void onAnimationEnd() {
+//                layout_title_home.setVisibility(View.INVISIBLE);
+//                reveal_layout.setVisibility(View.INVISIBLE);
+//                transition_screen.setVisibility(View.INVISIBLE);
+//                List_Vocabulary_Fragment listVocabularyFragment = new List_Vocabulary_Fragment();
+//                replaceFragment(listVocabularyFragment);
+//            }
+//        });
+//        anim.start();
+//
+//    }
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.content_main, fragment);
+        transaction.addToBackStack("");
+        transaction.setCustomAnimations(0,0);
+        transaction.commit();
     }
-    private void initPopup() {
-        mPopupWindow = new PopupWindow(viewPopup, ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-        mPopupWindow.setBackgroundDrawable(new BitmapDrawable());
-
+    public void replaceFirst(Fragment fragment){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.content_main, fragment);
+        transaction.commit();
     }
-    private static class SimpleListener implements SupportAnimator.AnimatorListener, com.nineoldandroids.animation.ObjectAnimator.AnimatorListener {
+    public boolean removeTopFragment(){
+        FragmentManager fm = getSupportFragmentManager();
+        if(fm.getBackStackEntryCount()>0){
+            try{
+                fm.popBackStack();
+                return true;
+            }catch (Exception e){
 
-        @Override
-        public void onAnimationStart() {
-
+            }
         }
+        return false;
+    }
+    public void clearTopFragment(){
+        FragmentManager fm = getSupportFragmentManager();
+        for(int i = 0 ; i < fm.getBackStackEntryCount(); i++){
+            try{
+                fm.popBackStack();
+            }catch (Exception e){
 
-        @Override
-        public void onAnimationEnd() {
-
-        }
-
-        @Override
-        public void onAnimationCancel() {
-
-        }
-
-        @Override
-        public void onAnimationRepeat() {
-
-        }
-
-        @Override
-        public void onAnimationStart(Animator animation) {
-
-        }
-
-        @Override
-        public void onAnimationEnd(Animator animation) {
-
-        }
-
-        @Override
-        public void onAnimationCancel(Animator animation) {
-
-        }
-
-        @Override
-        public void onAnimationRepeat(Animator animation) {
-
+            }
         }
     }
 

@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
 
 import qlearn.com.quang.english.util.GeneralUtils;
@@ -33,6 +34,7 @@ public class CustomImageSplash extends ImageView {
 
     public CustomImageSplash(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         mPaintLip = new Paint();
         mPaintEye = new Paint();
         mPaintLipNoShadow = new Paint();

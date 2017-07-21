@@ -22,7 +22,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_DESCRIPTION = "_description";
     private static final String DATABASE_CREATE = "create table " +
             TABLE_3000W + "(" +
-            COLUMN_ID + " integer primary key autoincrement," +
+            COLUMN_ID + " integer," +
             COLUMN_VOCABULARY + " text," +
             COLUMN_WORDFORM + " text," +
             COLUMN_PRONOUNCE + " text," +

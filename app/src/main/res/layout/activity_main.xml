@@ -2,30 +2,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <io.codetail.widget.RevealFrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:visibility="gone">
-
-        <io.codetail.widget.RevealFrameLayout
-            android:id="@+id/transition_screen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/splashscreen"
-            android:visibility="visible"></io.codetail.widget.RevealFrameLayout>
-
-        <qlearn.com.quang.english.customview.CustomImageSplash
-            android:id="@+id/img_smile"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
-            android:layout_gravity="center"
-
-            android:visibility="visible" />
-
-
-    </io.codetail.widget.RevealFrameLayout>
-
     <android.support.v4.widget.DrawerLayout
 
         android:id="@+id/drawer_layout"
@@ -56,8 +32,16 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
-                android:minHeight="?attr/actionBarSize" />
+                android:layout_margin="5dp"
+                android:background="@drawable/shadow_backroud"
+                android:minHeight="?attr/actionBarSize" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/textView"
+                    android:layout_gravity="center_horizontal" />
+                </android.support.v7.widget.Toolbar>
 
         </io.codetail.widget.RevealFrameLayout>
 

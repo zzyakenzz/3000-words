@@ -7,8 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import java.sql.SQLException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.ArrayList;
 
 import qlearn.com.quang.english.model.WordModel;
 
@@ -28,6 +27,7 @@ public class Database {
 
     public void open() throws SQLException {
         database = dbHelper.getWritableDatabase();
+
     }
 
     public void close() {
@@ -45,7 +45,8 @@ public class Database {
         database.insert(MySQLiteHelper.TABLE_3000W, null, values);
     }
 
-    public WordModel getWord(int id) {
+
+    public WordModel getWordCorrect(int id) {
         Cursor cursor = database.query(MySQLiteHelper.TABLE_3000W, allColumns, MySQLiteHelper.COLUMN_ID + " = ?", new String[]{String.valueOf(id)},
                 null, null, null, null);
         if (cursor != null)
@@ -59,9 +60,29 @@ public class Database {
         Log.d(getClass().getSimpleName().toString(), "getWord(" + id + "):" + wordModel.toString());
         return wordModel;
     }
+    public ArrayList<WordModel> getWord(String word) {
+        ArrayList<WordModel> list = new ArrayList<WordModel>();
+        String query = "SELECT * FROM " + MySQLiteHelper.TABLE_3000W + " WHERE "+ MySQLiteHelper.COLUMN_VOCABULARY + " LIKE '"+word+"%'";
+        Cursor cursor = database.rawQuery(query, null);
+        if (cursor.moveToFirst()) {
+            do {
+                WordModel wordModel = new WordModel();
+                wordModel.setId(Integer.parseInt(cursor.getString(0)));
+                wordModel.setVocabulary(cursor.getString(1));
+                wordModel.setWordForm(cursor.getString(2));
+                wordModel.setPronounce(cursor.getString(3));
+                wordModel.setTranslate(cursor.getString(4));
+                wordModel.setDescription(cursor.getString(5));
+                list.add(wordModel);
+            } while (cursor.moveToNext());
+        }
+//        database.close();
+        return list;
+    }
 
-    public List<WordModel> getAllWord() {
-        List<WordModel> list = new LinkedList<WordModel>();
+
+    public ArrayList<WordModel> getAllWord() {
+        ArrayList<WordModel> list = new ArrayList<>();
         String query = "SELECT * FROM " + MySQLiteHelper.TABLE_3000W;
         Cursor cursor = database.rawQuery(query, null);
         if (cursor.moveToFirst()) {
@@ -75,6 +96,7 @@ public class Database {
                 list.add(wordModel);
             } while (cursor.moveToNext());
         }
+//        database.close();
         return list;
     }
 

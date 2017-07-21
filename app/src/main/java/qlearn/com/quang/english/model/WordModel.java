@@ -1,9 +1,11 @@
 package qlearn.com.quang.english.model;
 
+import java.io.Serializable;
+
 /**
  * Created by quang.nguyen on 17/12/2015.
  */
-public class WordModel {
+public class WordModel implements Serializable{
     public int id;
     public String vocabulary;
     public String wordForm;

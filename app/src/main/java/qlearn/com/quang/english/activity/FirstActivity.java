@@ -3,7 +3,9 @@ package qlearn.com.quang.english.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import qlearn.com.quang.english.database.MySQLiteHelper;
 import qlearn.com.quang.english.util.GeneralUtils;
@@ -16,6 +18,10 @@ public class FirstActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED,
+                    WindowManager.LayoutParams.FLAG_HARDWARE_ACCELERATED);
+        }
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
         Intent intent;

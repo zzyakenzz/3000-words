@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_backgroud">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        >
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shadow_backroud"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize">
+            <qlearn.com.quang.english.customview.TextRoboThin
+                android:id="@+id/txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="3000 words for you"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <RelativeLayout
+                        android:id="@+id/box_one"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/white_background"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:visibility="invisible"
+                        >
+                        <ImageView
+                            android:id="@+id/icon_book"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:layout_margin="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/book_black"/>
+                        <qlearn.com.quang.english.customview.TextRoboThin
+                            android:layout_toRightOf="@+id/icon_book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:textAllCaps="true"
+                            android:textScaleX="1"
+
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="Learn 3000 \n words"
+                            android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/box_two"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/white_background"
+
+                        android:layout_marginBottom="5dp"
+                        android:visibility="invisible"
+                        >
+                        <ImageView
+                            android:id="@+id/icon_ref"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ref_black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+
+                android:layout_height="0dp"
+                android:layout_weight="2"
+
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/box_three"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+
+                    android:background="@drawable/white_background"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="invisible"
+                    >
+                    <ImageView
+                        android:id="@+id/icon_headphone"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/headphones_black"/>
+                    <qlearn.com.quang.english.customview.TextRoboThin
+                        android:layout_toRightOf="@+id/icon_headphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:textAllCaps="true"
+                        android:textScaleX="1"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="1000 phrase \nfor you "
+                        android:visibility="visible"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/box_four"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+
+                    android:background="@drawable/white_background"
+                    android:layout_weight="1"
+
+                    android:visibility="invisible"
+                    >
+                    <ImageView
+                        android:id="@+id/icon_picture"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_margin="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/picture_black"/>
+                    <qlearn.com.quang.english.customview.TextRoboThin
+                        android:layout_toRightOf="@+id/icon_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:textAllCaps="true"
+                        android:textScaleX="1"
+
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Learn vocabulary\n through  picture"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                >
+                <RelativeLayout
+                    android:id="@+id/box_five"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/white_background"
+                    >
+                    <ImageView
+                        android:id="@+id/icon_game"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/game_black"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/box_six"
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:visibility="invisible"
+                    >
+                    <qlearn.com.quang.english.customview.TextRoboThin
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textScaleX="1"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:text="this is a game"
+                        android:layout_alignLeft="@+id/icon_arrow"
+                        android:visibility="visible"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:shadowColor="#7F000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+
+                        android:id="@+id/txt_game"
+                        />
+
+                    <ImageView
+                        android:id="@+id/icon_arrow"
+                        android:layout_below="@+id/txt_game"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:src="@drawable/arrow"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+
+        android:id="@+id/btn_temp_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:src="@android:drawable/sym_action_chat"
+        android:visibility="invisible"
+
+
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_colorNormal="@color/splashscreen"
+        fab:menu_colorRipple="#99FFFFFF"
+        />
+
+    <com.github.clans.fab.FloatingActionMenu
+
+        android:id="@+id/btn_temp_float_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="end|bottom"
+
+        android:clickable="false"
+
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+
+        fab:menu_colorNormal="@color/splashscreen"
+        fab:menu_colorRipple="#99FFFFFF"
+
+        android:visibility="invisible"
+        />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btn_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="end|bottom"
+
+        android:clickable="true"
+
+        android:visibility="invisible"
+
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+
+        fab:menu_colorNormal="@color/splashscreen"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_backgroundColor="@android:color/transparent"
+        >
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Hello"
+            app:fab_size="mini"
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="My girl"
+            app:fab_size="mini"
+            />
+        <com.github.clans.fab.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="I'm Quang"
+            app:fab_size="mini"
+            />
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/reveal_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+        <io.codetail.widget.RevealFrameLayout
+            android:id="@+id/transition_screen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/splashscreen"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_smile"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+        </io.codetail.widget.RevealFrameLayout>
+    </io.codetail.widget.RevealFrameLayout>
+
+</FrameLayout>

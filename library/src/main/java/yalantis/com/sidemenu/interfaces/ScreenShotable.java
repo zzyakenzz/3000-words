@@ -7,6 +7,6 @@ import android.graphics.Bitmap;
  */
 public interface ScreenShotable {
     void takeScreenShot();
-
+    void getLabel();
     Bitmap getBitmap();
 }

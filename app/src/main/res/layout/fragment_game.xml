@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/teal_500"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/img_game"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/game_sub"
+                android:text="New Text" />
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/ab_solid_shadow_holo" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/splashscreen" />
+
+                    <TextView
+                        android:id="@+id/txt_sugess_A"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lines="2"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/splashscreen" />
+
+                    <TextView
+                        android:id="@+id/txt_sugess_B"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lines="2"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/splashscreen" />
+
+                    <TextView
+                        android:id="@+id/txt_sugess_C"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lines="2"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/splashscreen" />
+
+                    <TextView
+                        android:id="@+id/txt_sugess_D"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="8dp"
+                        android:lines="2"
+                        android:minLines="2"
+                        android:padding="5dp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <qlearn.com.quang.english.customview.CustomRippleLayout
+                            android:id="@+id/btn_A"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/teal_500">
+
+                            <qlearn.com.quang.english.customview.TextRoboBold
+                                android:id="@+id/txt_A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Text A"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txt_word_form_A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="10dp"
+                                android:text="form"
+                                android:textColor="@color/white" />
+
+                            <FrameLayout
+                                android:id="@+id/fra_img_number_A"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:alpha="1"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/img_A"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/btn_switch" />
+
+                                <TextView
+                                    android:id="@+id/txt_number_A"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </FrameLayout>
+                        </qlearn.com.quang.english.customview.CustomRippleLayout>
+
+                        <qlearn.com.quang.english.customview.CustomRippleLayout
+                            android:id="@+id/btn_B"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/deep_orange_500">
+
+                            <qlearn.com.quang.english.customview.TextRoboBold
+                                android:id="@+id/txt_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Text A"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txt_word_form_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="10dp"
+                                android:text="form"
+                                android:textColor="@color/white" />
+
+                            <FrameLayout
+                                android:id="@+id/fra_img_number_B"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:alpha="1"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/img_B"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/btn_switch" />
+
+                                <TextView
+                                    android:id="@+id/txt_number_B"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </FrameLayout>
+                        </qlearn.com.quang.english.customview.CustomRippleLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <qlearn.com.quang.english.customview.CustomRippleLayout
+                            android:id="@+id/btn_C"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/red_500">
+
+                            <qlearn.com.quang.english.customview.TextRoboBold
+                                android:id="@+id/txt_C"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Text A"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txt_word_form_C"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="10dp"
+                                android:text="form"
+                                android:textColor="@color/white" />
+
+                            <FrameLayout
+                                android:id="@+id/fra_img_number_C"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:alpha="1"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/img_C"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/btn_switch" />
+
+                                <TextView
+                                    android:id="@+id/txt_number_C"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:text="3"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </FrameLayout>
+                        </qlearn.com.quang.english.customview.CustomRippleLayout>
+
+                        <qlearn.com.quang.english.customview.CustomRippleLayout
+                            android:id="@+id/btn_D"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:background="@color/blue_500">
+
+                            <qlearn.com.quang.english.customview.TextRoboBold
+                                android:id="@+id/txt_D"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="Text A"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/txt_word_form_D"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:padding="10dp"
+                                android:text="form"
+                                android:textColor="@color/white" />
+
+                            <FrameLayout
+                                android:id="@+id/fra_img_number_D"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:alpha="1"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:id="@+id/img_D"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/btn_switch" />
+
+                                <TextView
+                                    android:id="@+id/txt_number_D"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:text="4"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+                            </FrameLayout>
+                        </qlearn.com.quang.english.customview.CustomRippleLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/frag_next_question"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:visibility="invisible">
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@color/green_500" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_next"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frag_error_answer"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:visibility="invisible">
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@color/red_500" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/icon_error"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+</FrameLayout>
